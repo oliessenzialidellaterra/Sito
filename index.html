@@ -8,6 +8,7 @@
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+
     :root {
       --bg: #0f1420;
       --card: #1a2235;
@@ -21,7 +22,9 @@
       --shadow: 0 20px 80px rgba(0,0,0,0.45);
     }
 
+
     html { scroll-behavior: smooth; }
+
 
     body {
       font-family: "Times New Roman", Times, serif;
@@ -31,8 +34,10 @@
       width: 100%;
     }
 
+
     a { text-decoration: none; color: inherit; }
     ul, ol { list-style: none; }
+
 
     #intro {
       position: fixed;
@@ -46,9 +51,11 @@
       animation: introOut 0.7s ease 2.2s forwards;
     }
 
+
     @keyframes introOut { to { opacity: 0; visibility: hidden; pointer-events: none; } }
     @keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
 
     .intro-title {
       font-size: clamp(1.8rem, 4vw, 3rem);
@@ -62,6 +69,7 @@
       color: #fff;
     }
 
+
     .intro-doterra {
       font-size: 1rem;
       letter-spacing: 6px;
@@ -71,6 +79,7 @@
       animation: slideUp 0.5s ease 0.35s both;
       margin-bottom: 26px;
     }
+
 
     .intro-bar-wrap {
       width: 220px;
@@ -82,6 +91,7 @@
       animation: fadeIn 0.25s ease 0.5s both;
     }
 
+
     .intro-bar {
       height: 100%;
       width: 0%;
@@ -91,7 +101,9 @@
       box-shadow: 0 0 18px rgba(176,126,217,0.32);
     }
 
+
     @keyframes barFill { to { width: 100%; } }
+
 
     header {
       position: fixed;
@@ -112,6 +124,7 @@
       animation: headerAppear 0.6s ease 2.35s both;
     }
 
+
     header.scrolled {
       background: var(--menu-bg);
       border-bottom-color: var(--menu-border);
@@ -119,10 +132,12 @@
       padding: 12px 24px;
     }
 
+
     @keyframes headerAppear {
       from { opacity: 0; transform: translateY(-16px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
 
     .header-inner {
       width: min(1100px, 100%);
@@ -132,6 +147,7 @@
       gap: 20px;
       min-width: 0;
     }
+
 
     .logo {
       font-size: 1.2rem;
@@ -146,7 +162,9 @@
       flex: 0 0 auto;
     }
 
+
     nav { min-width: 0; }
+
 
     nav ul {
       display: flex;
@@ -159,7 +177,9 @@
       padding: 0;
     }
 
+
     nav li { list-style: none; }
+
 
     nav a {
       font-size: 0.9rem;
@@ -171,7 +191,9 @@
       white-space: nowrap;
     }
 
+
     nav a:hover { color: var(--primary); }
+
 
     nav a::after {
       content: '';
@@ -182,7 +204,9 @@
       transition: width 0.25s;
     }
 
+
     nav a:hover::after { width: 100%; }
+
 
     .menu-btn {
       display: none;
@@ -193,6 +217,7 @@
       cursor: pointer;
       flex: 0 0 auto;
     }
+
 
     .hero {
       position: fixed;
@@ -206,11 +231,13 @@
       background-repeat: no-repeat;
     }
 
+
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg, rgba(15,20,32,0.72) 0%, rgba(15,20,32,0.56) 35%, rgba(15,20,32,0.82) 70%, rgba(15,20,32,0.97) 100%);
     }
+
 
     .hero-content {
       position: absolute;
@@ -220,6 +247,7 @@
       justify-content: center;
       padding: 20px;
     }
+
 
     .hero-glass {
       background: transparent;
@@ -233,10 +261,12 @@
       animation: glassReveal 0.8s cubic-bezier(0.34,1.2,0.64,1) 2.45s both;
     }
 
+
     @keyframes glassReveal {
       from { opacity: 0; transform: translateY(24px) scale(0.98); }
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
+
 
     .hero h1 {
       font-size: clamp(2.05rem, 4.6vw, 4.2rem);
@@ -246,6 +276,7 @@
       margin-bottom: 14px;
       animation: floatH1 6s ease-in-out infinite 3.2s;
     }
+
 
     .hero-grad {
       display: inline-block;
@@ -257,7 +288,9 @@
       filter: drop-shadow(0 0 7px rgba(255, 216, 170, 0.14));
     }
 
+
     @keyframes floatH1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
 
     .hero h2 {
       font-size: clamp(0.95rem, 1.6vw, 1.25rem);
@@ -267,6 +300,7 @@
       text-shadow: 0 2px 12px rgba(0,0,0,0.45);
     }
 
+
     .hero p {
       font-size: 0.92rem;
       color: #ffffff;
@@ -275,6 +309,7 @@
       line-height: 1.9;
       text-shadow: 0 1px 8px rgba(0,0,0,0.35);
     }
+
 
     .btn {
       display: inline-block;
@@ -294,7 +329,9 @@
       overflow: hidden;
     }
 
+
     .btn:hover { transform: translateY(-3px); background: var(--primary-light); box-shadow: 0 14px 44px rgba(176,126,217,0.55); }
+
 
     .page-content {
       position: relative;
@@ -303,11 +340,13 @@
       background: var(--bg);
     }
 
+
     section {
       padding: 100px 24px;
       max-width: 1160px;
       margin: 0 auto;
     }
+
 
     .section-title {
       font-size: clamp(1.8rem, 2.8vw, 2.3rem);
@@ -317,6 +356,7 @@
       color: var(--primary);
       position: relative;
     }
+
 
     .section-title::after {
       content: '';
@@ -328,6 +368,7 @@
       border-radius: 2px;
     }
 
+
     .about-card {
       display: grid;
       grid-template-columns: 1fr 1.6fr;
@@ -338,6 +379,7 @@
       max-width: 980px;
       margin: 0 auto;
     }
+
 
     .about-img-wrap { position: relative; overflow: hidden; min-height: 500px; }
     .about-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
@@ -351,11 +393,13 @@
     .feature-chip { display: flex; align-items: center; gap: 8px; background: rgba(176,126,217,0.08); border: 1px solid rgba(176,126,217,0.18); color: var(--text); padding: 8px 16px; border-radius: 999px; font-size: 0.88rem; font-weight: 600; }
     .feature-chip i { color: var(--primary); font-size: 0.9rem; }
 
+
     .carousel-section {
       background: linear-gradient(180deg, var(--bg) 0%, #141b29 100%);
       padding: 110px 24px;
       border-top: 1px solid rgba(176,126,217,0.08);
     }
+
 
     .carousel-shell { max-width: 1100px; margin: 0 auto; position: relative; padding: 28px 18px 18px; }
     .carousel-frame { position: relative; overflow: hidden; border-radius: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(176,126,217,0.16); box-shadow: 0 24px 90px rgba(0,0,0,0.42); backdrop-filter: blur(10px); }
@@ -368,6 +412,7 @@
     .dot { width: 10px; height: 10px; border-radius: 999px; border: none; background: rgba(255,255,255,0.22); cursor: pointer; }
     .dot.active { width: 28px; background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
 
+
     .opportunities-section, .faq-section { background: linear-gradient(180deg, var(--bg) 0%, #161e2e 100%); padding: 100px 24px; border-top: 1px solid rgba(176,126,217,0.08); }
     .opportunities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; max-width: 1160px; margin: 0 auto; }
     .opportunity-item { background: linear-gradient(180deg, rgba(176,126,217,0.08), rgba(26,34,53,0.95)); padding: 34px 28px; border-radius: 20px; border: 1px solid rgba(176,126,217,0.14); box-shadow: 0 12px 40px rgba(0,0,0,0.25); position: relative; overflow: hidden; }
@@ -377,6 +422,7 @@
     .opportunity-item ul { list-style: none; display: grid; gap: 10px; margin-top: 14px; }
     .opportunity-item li { color: #ffffff; font-size: 0.92rem; line-height: 1.5; display: flex; gap: 10px; align-items: flex-start; }
     .opportunity-item li i { color: var(--primary); margin-top: 3px; flex: 0 0 auto; }
+
 
     .timeline-section { background: var(--bg); padding: 100px 24px; }
     .timeline { position: relative; max-width: 980px; margin: 0 auto; padding: 20px 0; }
@@ -392,6 +438,7 @@
     .timeline-card h4 { color: #ffffff; font-size: 1.2rem; margin-bottom: 10px; }
     .timeline-card p { color: var(--muted); line-height: 1.78; font-size: 0.95rem; }
 
+
     .faq-grid { max-width: 980px; margin: 0 auto; display: grid; gap: 16px; }
     .faq-item { background: linear-gradient(180deg, rgba(176,126,217,0.06), rgba(26,34,53,0.95)); border: 1px solid rgba(176,126,217,0.12); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.18); }
     .faq-item summary { list-style: none; cursor: pointer; padding: 22px 22px 22px 24px; font-weight: 700; color: #ffffff; position: relative; font-size: 1rem; }
@@ -400,6 +447,7 @@
     .faq-item[open] summary::after { content: '−'; }
     .faq-answer { padding: 0 24px 22px 24px; color: var(--muted); line-height: 1.82; font-size: 0.95rem; max-width: 820px; }
 
+
     .benefits-section { background: linear-gradient(180deg, var(--bg) 0%, #161e2e 100%); padding: 100px 24px; border-top: 1px solid rgba(176,126,217,0.08); }
     .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 1160px; margin: 0 auto; }
     .benefit-item { background: rgba(176,126,217,0.05); padding: 40px 28px; border-radius: 18px; text-align: center; border: 1px solid rgba(176,126,217,0.1); transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s; }
@@ -407,6 +455,7 @@
     .benefit-icon { font-size: 2.6rem; color: var(--primary); margin-bottom: 20px; }
     .benefit-item h4 { font-size: 1.22rem; color: var(--text); margin-bottom: 12px; }
     .benefit-item p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; }
+
 
     .contact-section { background: var(--bg); padding: 100px 24px; }
     .contact-form { background: var(--card); padding: 52px 44px; border-radius: 22px; max-width: 640px; margin: 0 auto; box-shadow: 0 16px 60px rgba(0,0,0,0.4); border: 1px solid rgba(176,126,217,0.12); }
@@ -422,11 +471,13 @@
     .whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 14px 34px; font-size: 1rem; font-weight: 700; font-family: "Times New Roman", Times, serif; border-radius: 999px; transition: 0.3s; box-shadow: 0 6px 28px rgba(37,211,102,0.3); }
     .whatsapp-btn:hover { background: #1ebc57; transform: translateY(-3px); box-shadow: 0 12px 36px rgba(37,211,102,0.4); }
 
+
     footer { background: #080c14; padding: 44px 24px; text-align: center; border-top: 1px solid rgba(176,126,217,0.1); }
     footer p { font-size: 0.88rem; color: var(--muted); margin-bottom: 20px; }
     .social-links { display: flex; justify-content: center; gap: 24px; }
     .social-links a { font-size: 1.5rem; color: var(--primary); transition: 0.3s; }
     .social-links a:hover { color: var(--primary-light); transform: translateY(-5px); }
+
 
     @media (max-width: 900px) {
       .hero h1 { font-size: clamp(1.9rem, 7vw, 3rem); }
@@ -442,9 +493,11 @@
       section { padding: 78px 18px; }
     }
 
+
     @media (max-width: 820px) {
       header { border-radius: 0; }
       .menu-btn { display: block; }
+
 
       nav {
         position: fixed;
@@ -459,7 +512,9 @@
         box-shadow: 0 18px 50px rgba(0,0,0,0.35);
       }
 
+
       nav.active { display: block; }
+
 
       nav ul {
         flex-direction: column;
@@ -468,12 +523,15 @@
         white-space: normal;
       }
 
+
       nav a { font-size: 1rem; }
+
 
       .hero-content { padding: 16px; }
       .hero h1 { font-size: clamp(1.8rem, 9vw, 2.65rem); }
       .hero h2 { font-size: 0.98rem; }
       .hero p { font-size: 0.9rem; line-height: 1.75; margin-bottom: 26px; }
+
 
       .btn {
         width: 100%;
@@ -483,12 +541,14 @@
         letter-spacing: 1.3px;
       }
 
+
       .carousel-section { padding: 84px 16px; }
       .carousel-frame { border-radius: 22px; }
       .carousel-slide { aspect-ratio: 4 / 5; }
       .carousel-btn { width: 42px; height: 42px; }
       .carousel-btn.prev { left: 8px; }
       .carousel-btn.next { right: 8px; }
+
 
       .timeline::before { left: 18px; }
       .timeline-item {
@@ -504,15 +564,18 @@
         right: auto !important;
       }
 
+
       .timeline-card { padding: 22px; }
       .faq-item summary { padding: 18px 48px 18px 18px; }
       .faq-answer { padding: 0 18px 18px 18px; }
+
 
       .contact-section { padding: 82px 16px; }
       .contact-form { padding: 28px 18px; }
       .whatsapp-btn { width: 100%; justify-content: center; padding: 14px 20px; }
       footer { padding: 36px 18px; }
     }
+
 
     @media (max-width: 480px) {
       header { padding: 12px 14px; }
@@ -537,11 +600,13 @@
 </head>
 <body>
 
+
   <div id="intro">
     <div class="intro-title">Oli Essenziali<br><span class="hero-grad">Della Terra</span></div>
     <div class="intro-doterra">dōTERRA</div>
     <div class="intro-bar-wrap"><div class="intro-bar"></div></div>
   </div>
+
 
   <header id="site-header">
     <div class="header-inner">
@@ -562,6 +627,7 @@
     </div>
   </header>
 
+
   <div class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -573,6 +639,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="page-content">
     <section id="chi-sono">
@@ -597,6 +664,7 @@
       </div>
     </section>
 
+
     <section class="carousel-section" id="carosello">
       <h2 class="section-title">Carosello</h2>
       <div class="carousel-shell">
@@ -615,6 +683,7 @@
       </div>
     </section>
 
+
     <section class="opportunities-section" id="opportunita">
       <h2 class="section-title">Le opportunità con dōTERRA</h2>
       <div class="opportunities-grid">
@@ -625,6 +694,7 @@
       </div>
     </section>
 
+
     <section class="timeline-section" id="cambiamento">
       <h2 class="section-title">Timeline del cambiamento</h2>
       <div class="timeline">
@@ -634,6 +704,7 @@
         <div class="timeline-item right"><div class="timeline-card"><span class="timeline-year">Fase 4</span><h4>Crescita</h4><p>Cominci a vedere risultati, relazioni nuove e una visione più ampia del tuo futuro.</p></div></div>
       </div>
     </section>
+
 
     <section class="faq-section" id="faq">
       <h2 class="section-title">FAQ</h2>
@@ -648,6 +719,7 @@
       </div>
     </section>
 
+
     <div class="benefits-section" id="benefici">
       <h2 class="section-title">Perché dōTERRA?</h2>
       <div class="benefits-grid">
@@ -658,7 +730,8 @@
       </div>
     </div>
 
-<div class="contact-section" id="contatti">
+
+    <div class="contact-section" id="contatti">
       <h2 class="section-title">Contatta Sara</h2>
       <div class="contact-form">
         <form id="doterra-form" action="https://formspree.io/f/mojoqlkw" method="POST">
@@ -676,6 +749,7 @@
       </div>
     </div>
 
+
     <footer>
       <p>© 2026 Sara Cesaroni — Oli Essenziali Della Terra | Consulente Certificata dōTERRA</p>
       <div class="social-links">
@@ -686,6 +760,7 @@
       </div>
     </footer>
   </div>
+
 
   <script>
     const intro = document.getElementById('intro');
@@ -750,12 +825,29 @@
 
     startAutoplay();
 
-    document.getElementById('doterra-form').addEventListener('submit', e => {
+    const form = document.getElementById('doterra-form');
+    const successMsg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      setTimeout(() => {
-        document.getElementById('doterra-form').style.display = 'none';
-        document.getElementById('success-msg').style.display = 'block';
-      }, 600);
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+        } else {
+          alert('Errore nell’invio. Riprova tra poco.');
+        }
+      } catch (err) {
+        alert('Errore di connessione. Riprova.');
+      }
     });
   </script>
 </body>
